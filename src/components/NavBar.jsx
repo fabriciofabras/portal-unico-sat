@@ -2,7 +2,11 @@ import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
 import { useState } from "react";
 
-export const NavBar = () => {
+export const NavBar = ({ onOpcionSeleccionada }) => {
+
+    const handleClick = (opcion) => {
+    onOpcionSeleccionada(opcion);
+    };
 
     const [language, setLanguage] = useState('ES');
 
@@ -25,17 +29,26 @@ export const NavBar = () => {
           </a>
         </a>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-          <a onClick={(e) => smoothScroll(e,"projects")} href="#projects" className="mr-5 hover:text-white">
+          <a href="#projects" className="mr-5 hover:text-white">
             Repositorio de Información
           </a>
-          <a onClick={(e) => smoothScroll(e,"skills")} href="#skills" className="mr-5 hover:text-white">
-            Monitoreo y Mesa de Ayuda
+          <a href="#skills" className="mr-5 hover:text-white">
+            Monitoreo
           </a>
-          <a onClick={(e) => smoothScroll(e,"skills")} href="#skills" className="mr-5 hover:text-white">
+          <a href="#skills" className="mr-5 hover:text-white">
+             Mesa de Ayuda
+          </a>
+          <a href="#skills" className="mr-5 hover:text-white">
             Otra Información
           </a>
-          <a onClick={(e) => smoothScroll(e,"skills")} href="#skills" className="mr-5 hover:text-white">
+          <a onClick={() => handleClick('heatmap')} href="#skills" className="mr-5 hover:text-white">
             HeatMap
+          </a>
+          <a onClick={() => handleClick('monitoreo')} href="#skills" className="mr-5 hover:text-white">
+            Monitoreo
+          </a>
+          <a onClick={() => handleClick('inventarios')} href="#skills" className="mr-5 hover:text-white">
+            Inventarios
           </a>
           {/* <a href="#testimonials" className="mr-5 hover:text-white">
             Testimonios
