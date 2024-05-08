@@ -32,7 +32,7 @@ export const NavBar = ({ onOpcionSeleccionada }) => {
           <a href="#projects" className="mr-5 hover:text-white">
             Repositorio de Información
           </a>
-          <a href="#skills" className="mr-5 hover:text-white">
+          <a onClick={() => handleClick('monitoreo')} href="#skills" className="mr-5 hover:text-white">
             Monitoreo
           </a>
           <a href="#skills" className="mr-5 hover:text-white">
@@ -43,9 +43,6 @@ export const NavBar = ({ onOpcionSeleccionada }) => {
           </a>
           <a onClick={() => handleClick('heatmap')} href="#skills" className="mr-5 hover:text-white">
             HeatMap
-          </a>
-          <a onClick={() => handleClick('monitoreo')} href="#skills" className="mr-5 hover:text-white">
-            Monitoreo
           </a>
           <a onClick={() => handleClick('inventarios')} href="#skills" className="mr-5 hover:text-white">
             Inventarios
