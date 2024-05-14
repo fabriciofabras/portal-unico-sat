@@ -8,7 +8,7 @@ export const Monitoreo = () => {
 
       
          <iframe  style={{width: 'inherit'}}
-         src="https://sm-engine.atalait.com.mx:5601"
+         src="https://sm-engine.atalait.com.mx:5601/"
          height="700" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowFullScreen={true}></iframe>
 
 
